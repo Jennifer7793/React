@@ -20,6 +20,9 @@ const Example5 = () => {
   };
   return (
     <section data-name="Example5">
+      <button onClick={atClick}>{isLoggedIn ? 'Logout' : 'Login'}</button>
+      {isLoggedIn ? <UserGreeting /> : <GuestGreeting />}
+      {isLoggedIn && <UserGreeting name="Jenjen" />}
       {/* <button onClick={atClick}>{isLoggedIn ? '登出' : '登入'}</button>
       {isLoggedIn ? <UserGreeting /> : <GuestGreeting />}
       {isLoggedIn && <UserGreeting name="milkmidi" />} */}
