@@ -1,6 +1,12 @@
 import React from 'react';
 
 const Clock = () => {
+  React.useEffect(() => {
+    console.log('componentDidMount');
+    return () => {
+      console.log('componentWillUnmount');
+    };
+  }, []);
   /* React.useEffect(() => {
     console.log('componentDidMount');
     return () => {

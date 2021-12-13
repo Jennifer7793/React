@@ -7,7 +7,7 @@ const FuntionalCard = (props) => {
     img, name, children,
   } = props;
   return (
-    <div className="card">
+    < className="card">
       <img className="img" src={img} alt={name} />
       <div className="name">
         name:
@@ -16,7 +16,6 @@ const FuntionalCard = (props) => {
       <div className="quote">
         quote:
         {children}
-      </div>
       </div>
     </div>
   )

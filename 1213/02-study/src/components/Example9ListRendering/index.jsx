@@ -8,17 +8,21 @@ import React from 'react';
 const Example9 = () => {
   const [list, setList] = React.useState(['學會 JS', '學會 React', '年薪百萬']);
   const atAddClick = () => {
+    const newList = list.concat(new Date().toString());
+    setList(newList);
     // const newList = list.concat(new Date().toString());
     // setList(newList);
   };
   return (
     <section data-name="Example9">
-      <button
-        className="my-btn"
-        onClick={atAddClick}
-      >
+      <button className="my-btn" onClick={atAddClick}>
         Add
       </button>
+      <ol className="list">
+        {list.map((text) => {
+          return <li key={text}>{text}</li>;
+        })}
+      </ol>
       {/* <ol className="list">
         {
           list.map((text) => {
