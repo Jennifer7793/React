@@ -6,13 +6,28 @@ const Example6 = () => {
   const atClick = () => {
     setGreen(!isGreen);
   };
+  let boxClassName = 'box';
+  if (isGreen) {
+    boxClassName += 'style-green';
+  }
   /* let boxClassName = 'box';
   if (isGreen) {
     boxClassName += ' style-green';
   } */
   return (
     <section data-name="Example6StyleClassBind">
-      <button className="my-btn" onClick={atClick}>isGreen</button>
+      <button className="my-btn" onClick={atClick}>
+        isGreen
+      </button>
+      <div className={boxClassName} />
+      <div
+        style={{
+          width: 200,
+          height: 200,
+          backgroundColor: isGreen ? 'green' : 'red',
+          display: isGreen ? 'block' : 'none',
+        }}
+      />
       {/* <div className={boxClassName} />
       <div style={{
         width: 200,
