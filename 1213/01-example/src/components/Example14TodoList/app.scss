@@ -1,0 +1,16 @@
+.todo-item{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  padding: 24px 12px;
+  font-size: 16px;
+  color: #333;
+  transition: background-color .3s;
+  animation: show .3s ease-in-out;
+}
+.todo-item.done{
+  text-decoration: line-through;
+  color: #888;
+  background-color: #f6f6f6;
+}
