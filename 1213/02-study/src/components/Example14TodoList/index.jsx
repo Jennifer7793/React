@@ -10,6 +10,28 @@ const initialList = [
 ];
 const TodoList = () => {
   const [list, setList] = React.useState(initialList);
+  const atAddItem = (text) => {
+    const item = {
+      id: new Date().getTime().toString(),
+      text,
+      done: false,
+    };
+    setList(list.concat(item));
+  };
+
+  const atToggleItem = (id) => {
+    const newList = list.map((item) => {
+      if (item.id === id) {
+        return {
+          id: item.id,
+          text: item.text,
+          done: !item.done,
+        };
+      }
+      return item;
+    });
+    setList(newList);
+  };
 
   /* const atAddItem = (text) => {
     const item = {
@@ -38,18 +60,11 @@ const TodoList = () => {
     <section className="todo-list" data-name="TodoList.js">
       <TodoForm onAddItem={atAddItem} />
       <div>
-        {
-          list.map((item) => (
-            <TodoItem
-              key={item.id}
-              id={item.id}
-              done={item.done}
-              onToggleItem={atToggleItem}
-            >
-              {item.text}
-            </TodoItem>
-          ))
-        }
+        {list.map((item) => (
+          <TodoItem key={item.id} id={item.id} done={item.done} onToggleItem={atToggleItem}>
+            {item.text}
+          </TodoItem>
+        ))}
       </div>
     </section>
   );
