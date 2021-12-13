@@ -3,6 +3,13 @@ import PropTypes from 'prop-types';
 
 const TodoItem = (props) => {
   const { id, done, children, onToggleItem } = props;
+  const onClick = () => {
+    onToggleItem(id);
+  };
+  let className = 'todo-item';
+  if (done) {
+    className += 'done';
+  }
   /* const onClick = () => {
     onToggleItem(id);
   };

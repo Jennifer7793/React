@@ -32,11 +32,11 @@ const App = () => {
       {/* <Example7useEffectClosureAdvance /> */}
       {/* <Example8useEffectEmailValidate /> */}
       {/* <Example9ListRendering /> */}
-      <Example10ListRenderingAdvance />
+      {/* <Example10ListRenderingAdvance /> */}
       {/* <Example11useRef /> */}
       {/* <Example12ComponentCommunication /> */}
       {/* <Example13Form /> */}
-      {/* <Example14TodoList /> */}
+      <Example14TodoList />
       {/* <Example15emotion /> */}
       {/* <Example16Reactmemo /> */}
       {/* <Example17Hooks /> */}

@@ -20,6 +20,7 @@ const Example12 = () => {
         date:
         {date}
       </p>
+      <ChildComponent count={count} onCallParent={atCallParent} />
       {/* <ChildComponent
         count={count}
         onCallParent={atCallParent}
